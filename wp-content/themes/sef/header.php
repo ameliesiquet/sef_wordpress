@@ -11,7 +11,7 @@
     <meta name="description"
           content="Projet fait pour le client SEF Huy, fait par Amélie Siquet, étudiante à la HEPL.">
     <link rel="stylesheet" href="<?= dw_asset('css/site.css') ?>">
-    <title>Amélie Siquet - Web Developer</title>
+    <title>SEF - Amélie Siquet</title>
 </head>
 <body itemscope itemtype="https://schema.org/Person">
 <noscript>

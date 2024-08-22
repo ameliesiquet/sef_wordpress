@@ -8,7 +8,31 @@ register_nav_menu('main', 'Navigation principale, en-tête du site');
 register_nav_menu('footer', 'Navigation de pied de page');
 
 // Enregistrer un "type de contenu" personnalisé
+register_post_type('navigation-list', [
+    'label' => 'Navigation List',
+    'description' => 'My formation displayed on the website',
+    'public' => true,
+    'menu_position' => 24,
+    'menu_icon' => 'dashicons-book',
+    'has_archive' => true,
+    'rewrite' => [
+        'slug' => 'formation',
+    ],
+    'supports' => ['title', 'editor', 'thumbnail'],
+]);
 
+register_post_type('temoignages', [
+    'label' => 'Temoignages',
+    'description' => 'Des témoignages de Sef Huy',
+    'public' => true,
+    'menu_position' => 5,
+    'menu_icon' => 'dashicons-admin-users',
+    'has_archive' => true,
+    'rewrite' => [
+        'slug' => 'temoignages',
+    ],
+    'supports' => ['title', 'editor', 'thumbnail'],
+]);
 
 
 // Fonctions propres au thème :
