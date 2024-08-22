@@ -1,0 +1,31 @@
+
+# Ignoriere alles standardmäßig
+*
+
+# Aber nicht diese spezifischen Dateien
+!.gitignore
+!README.md
+!package.json
+!webpack.mix.js
+
+# Behalte den wp-content Ordner und seinen Inhalt
+!wp-content/
+wp-content/*
+
+# Behalte den themes Ordner und seinen Inhalt
+!wp-content/themes/
+wp-content/themes/*
+
+# Behalte den sef Ordner und seinen Inhalt
+!wp-content/themes/sef
+!wp-content/themes/sef/*
+
+!wp-content/themes/sef/ressources/
+!wp-content/themes/sef/ressources/**
+!wp-content/themes/sef/components/*
+!wp-content/themes/sef/home/
+!wp-content/themes/sef/components/
+!wp-content/themes/sef/home/*
+
+
+
