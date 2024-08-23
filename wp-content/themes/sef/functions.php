@@ -34,6 +34,19 @@ register_post_type('temoignages', [
     'supports' => ['title', 'editor', 'thumbnail'],
 ]);
 
+register_post_type('team-member', [
+    'label' => 'Team Member',
+    'description' => 'Les membres de l‘équipe de Sef Huy',
+    'public' => true,
+    'menu_position' => 6,
+    'menu_icon' => 'dashicons-admin-users',
+    'has_archive' => true,
+    'rewrite' => [
+        'slug' => 'team-member',
+    ],
+    'supports' => ['title', 'editor', 'thumbnail'],
+]);
+
 
 // Fonctions propres au thème :
 function dw_asset(string $file): string
