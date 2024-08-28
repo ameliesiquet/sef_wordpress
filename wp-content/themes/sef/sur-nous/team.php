@@ -1,6 +1,5 @@
 <section class="team">
     <h2>L'équipe</h2>
-    <!-- add more team members on wordpress whit img ,.. -->
     <div class="team__container">
         <?php
         $teammember = new WP_Query([

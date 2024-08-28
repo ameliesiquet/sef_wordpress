@@ -48,6 +48,8 @@ register_post_type('team-member', [
 ]);
 
 
+
+
 // Fonctions propres au thème :
 function dw_asset(string $file): string
 {
