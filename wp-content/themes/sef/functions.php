@@ -47,6 +47,30 @@ register_post_type('team-member', [
     'supports' => ['title', 'editor', 'thumbnail'],
 ]);
 
+register_post_type('articles', [
+    'label' => 'Articles',
+    'description' => 'Les personnes qui peuvent aider',
+    'public' => true,
+    'menu_position' => 7,
+    'menu_icon' => 'dashicons-admin-users',
+    'has_archive' => true,
+    'rewrite' => [
+        'slug' => 'articles',
+    ],
+    'supports' => ['title', 'editor', 'thumbnail'],
+]);
+register_post_type('monnaie', [
+    'label' => 'Monnaie',
+    'description' => 'Les dons',
+    'public' => true,
+    'menu_position' => 7,
+    'menu_icon' => 'dashicons-admin-users',
+    'has_archive' => true,
+    'rewrite' => [
+        'slug' => 'monnaie',
+    ],
+    'supports' => ['title', 'editor', 'thumbnail'],
+]);
 
 
 

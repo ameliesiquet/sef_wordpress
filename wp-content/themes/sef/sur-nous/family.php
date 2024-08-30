@@ -1,4 +1,4 @@
-<section class="family showUp">
+    <section class="family showUp">
     <h2><?= get_field('famille_title'); ?></h2>
     <p><?= get_field('famille_content'); ?></p>
     <?php $image = get_field('famille_image');

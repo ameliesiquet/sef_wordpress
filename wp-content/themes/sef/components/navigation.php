@@ -15,7 +15,7 @@
             <?php
             $nav = new WP_Query([
                 'post_type' => 'navigation-list',
-                'posts_per_page' => 6,
+                'posts_per_page' => 8,
             ]);
             if ($nav->have_posts()) :
                 while ($nav->have_posts()) : $nav->the_post();

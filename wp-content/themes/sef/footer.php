@@ -16,7 +16,7 @@
         <div class="footer__container__social">
             <h3 role="heading" aria-level="3">Social Media</h3>
             <a href="" title="Visiter le facebook de l'asbl SEF Huy">
-                <img src="" alt="">
+                <img src="../sef/ressources/img/facebook.svg" alt="Le logo de facebook">
             </a>
         </div>
         <div class="footer__container__adresse">

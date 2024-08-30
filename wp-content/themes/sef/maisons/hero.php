@@ -1,6 +1,5 @@
-<?php if (have_posts()): while (have_posts()): the_post(); ?>
 <section class="maisons__hero">
-    <h2 class="visually_hidden">Description</h2>
+    <h2 class="visually_hidden" aria-level="2" role="heading">Description</h2>
     <div class="maison__hero__content">
         <p><?= get_field('hero_content_top'); ?></p>
         <ul>
@@ -20,12 +19,11 @@
         <?php endif; ?>
     </div>
     <article>
-        <h3>Qui&nbsp;?</h3>
-        <p>Nous accueillons des personnes en difficulté, sans-abri, en rupture de tout ou presque et les enfants qui les accompagnent.</p>
+        <h3 aria-level="3" role="heading"><?= get_field('article_qui_title'); ?></h3>
+        <p><?= get_field('article_qui_content'); ?></p>
     </article>
     <article>
-        <h3>Quand&nbsp;</h3>
-        <p>Nous avons de la place pour quelques jours, quelques semaines ou quelques mois.</p>
+        <h3 aria-level="3" role="heading"><?= get_field('article_quand_title'); ?></h3>
+        <p><?= get_field('article_quand_content'); ?></p>
     </article>
 </section>
-<?php endwhile; endif; ?>
