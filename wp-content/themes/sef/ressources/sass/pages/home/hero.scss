@@ -1,0 +1,28 @@
+@import "../../global/variables";
+.home{
+  .hero{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    h2{
+      font-family: MontereyMediumFLF, serif;
+      font-size: 1.5em;
+      color: $black;
+      span{
+        color: $purple;
+      }
+    }
+    p{
+      font-size: 0.8em;
+      line-height: 1.2em;
+    }
+    &__cta{
+      a{
+        font-size: 0.8em;
+      }
+    }
+    img{
+      display: none;
+    }
+  }
+}

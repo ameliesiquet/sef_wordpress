@@ -3,7 +3,7 @@
     <div class="actual_project__item">
         <h3 aria-level="3" role="heading"><?= get_field('projet_actuel_second_titre'); ?></h3>
         <p><?= get_field('projet_actuel_content'); ?></p>
-        <div class="actual_project__cta">
+        <div class="actual_project__cta cta">
             <a class="cta__btn" href="<?= get_post_type_archive_link('project'); ?>"
                title="Lien vers le projet">savoir plus</a>
         </div>

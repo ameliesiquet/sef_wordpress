@@ -16,3 +16,480 @@ a {
 img {
   height: auto;
 }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+body {
+  font-family: "Roboto Light", sans-serif;
+  color: #706C6C;
+  font-weight: 200;
+  margin: 0;
+}
+
+section {
+  padding: 10%;
+}
+
+img {
+  height: auto;
+}
+
+/*TITLE*/
+h2 {
+  font-family: MontereyMediumFLF, serif;
+  color: #2B2962;
+}
+
+.cta {
+  background-color: #FBFBFB;
+  border-radius: 30px;
+  max-width: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.cta__btn {
+  color: #605BB7;
+  font-family: "Roboto Medium", serif;
+}
+
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+.burger-menu {
+  position: absolute;
+  right: 3%;
+  top: 1.6%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  background-color: #605BB7;
+  border-radius: 20px;
+}
+
+.burger-menu input {
+  display: block;
+  min-width: 3.5rem;
+  min-height: 2rem;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.burger-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding: 0.775rem 1.275rem;
+}
+
+.burger-wrapper span {
+  display: block;
+  width: 0.8125rem;
+  height: 0.125rem;
+  background-color: #FFFFF3;
+  border-radius: 0.1875rem;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.burger-menu span:first-child {
+  transform-origin: 0 0;
+}
+
+.burger-menu input:checked ~ .burger-wrapper span:first-child {
+  transform: rotate(45deg) translate(0.125rem, -0.0625rem);
+}
+
+.burger-menu input:checked ~ .burger-wrapper span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu input:checked ~ .burger-wrapper span:last-child {
+  transform: rotate(-45deg) translate(0.125rem, -0.125rem);
+}
+
+.burger-menu__list {
+  display: none;
+  background: white;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.burger-menu input:checked ~ .burger-menu__list {
+  background-color: white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  padding: 8.375rem 0;
+  transition: transform 1s ease-out, opacity 0.5s ease;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 8% 0;
+}
+
+.burger-menu input:checked ~ .burger-menu__list a {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 1.5em;
+  color: #605BB7;
+}
+
+.burger-menu input:checked ~ nav {
+  background-color: #AAAAAA;
+}
+
+@media (min-width: 800px) {
+  .burger-menu input#burger__toggle,
+  .burger-menu label,
+  .burger-menu .burger-wrapper {
+    display: none;
+  }
+  .burger-wrapper {
+    padding: 0.5rem 0.9rem;
+  }
+  .burger-menu__list {
+    display: block;
+    background-color: #232322;
+  }
+  .burger-menu {
+    position: inherit;
+  }
+}
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+header {
+  margin: 0;
+}
+header .navigation {
+  background-color: #E6E8FF;
+}
+header .navigation .logo {
+  padding: 0 15px;
+}
+header .navigation .logo img {
+  max-width: 15%;
+}
+
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+.footer {
+  background-color: #E6E8FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 2em 0 0;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.footer__container__item {
+  font-size: 0.7em;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.7em;
+}
+.footer__container__item a {
+  color: #000000;
+}
+.footer__container__item h3 {
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 1.2em;
+}
+.footer hr {
+  height: 1px;
+  color: #FBFBFB;
+  width: 100%;
+}
+.footer .footer-logo {
+  max-width: 30%;
+}
+.footer__bottom {
+  background-color: white;
+  width: 100%;
+  font-size: 0.5em;
+  display: flex;
+  padding: 2.5em 0 4.5em;
+  justify-content: center;
+  gap: 1.5em;
+  margin: 1.5em 0 0 0;
+}
+.footer__bottom a {
+  color: #706C6C;
+}
+
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+.home .hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+.home .hero h2 {
+  font-family: MontereyMediumFLF, serif;
+  font-size: 1.5em;
+  color: #000000;
+}
+.home .hero h2 span {
+  color: #605BB7;
+}
+.home .hero p {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+.home .hero__cta a {
+  font-size: 0.8em;
+}
+.home .hero img {
+  display: none;
+}
+
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+.home .actual_project {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.home .actual_project h2 {
+  order: -2;
+}
+.home .actual_project__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+.home .actual_project__item h3 {
+  font-family: "Roboto Medium", serif;
+  font-size: 0.9em;
+  color: #605BB7;
+}
+.home .actual_project__item p {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+.home .actual_project__item .cta {
+  max-width: 30%;
+  padding: 10px;
+}
+.home .actual_project__item .cta__btn {
+  font-size: 0.8em;
+}
+.home .actual_project img {
+  max-width: 100%;
+  order: -1;
+}
+
+/* COLORS */
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}
+.home .temoignages {
+  background: linear-gradient(90deg, #FFFFFF, #DADCF3, #FFFFFF);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  margin: 3em 0;
+}
+.home .temoignages h2 {
+  font-size: 1.2em;
+}
+.home .temoignages__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+.home .temoignages__container__card {
+  width: 75%;
+  border: 1px solid #2B2962;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FBFBFB;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+.home .temoignages__container__card h3 {
+  font-family: "Roboto Medium", sans-serif;
+  font-size: 0.9em;
+  color: #2B2962;
+}
+.home .temoignages__container__card img {
+  width: 100%;
+}
+.home .temoignages__container__card p {
+  font-size: 0.7em;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+/* COLORS */
+$light-purple: #E6E8FF;
+$dark-purple : #2B2962;
+$purple: #605BB7;
+$grey : #706C6C;
+$black : #000000;
+$white : #FBFBFB;
+
+
+
+/* FONTS */
+@font-face {
+  font-family: "MontereyMediumFLF";
+  src: url("/wp-content/themes/sef/ressources/font/MontereyMediumFLF.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Light.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("/wp-content/themes/sef/ressources/font/Roboto-Medium.ttf") format("truetype");
+}

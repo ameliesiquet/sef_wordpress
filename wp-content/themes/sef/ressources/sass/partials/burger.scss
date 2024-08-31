@@ -1,0 +1,99 @@
+@import "../global/variables";
+.burger-menu {
+  position: absolute;
+  right: 3%;
+  top: 1.6%;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: $purple ;
+  border-radius: 20px;
+}
+.burger-menu input {
+  display: block;
+  min-width: 3.5rem;
+  min-height: 2rem;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+.burger-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding: 0.775rem 1.275rem;
+}
+.burger-wrapper span {
+  display: block;
+  width: 0.8125rem;
+  height: 0.125rem;
+  background-color: #FFFFF3;
+  border-radius: 0.1875rem;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), opacity 0.55s ease;
+}
+.burger-menu span:first-child {
+  transform-origin: 0 0;
+}
+.burger-menu input:checked ~ .burger-wrapper span:first-child {
+  transform: rotate(45deg) translate(0.125rem, -0.0625rem);
+}
+.burger-menu input:checked ~ .burger-wrapper span:nth-child(2) {
+  opacity: 0;
+}
+.burger-menu input:checked ~ .burger-wrapper span:last-child {
+  transform: rotate(-45deg) translate(0.125rem, -0.125rem);
+}
+
+
+.burger-menu__list {
+  display: none;
+  background: white;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.burger-menu input:checked ~ .burger-menu__list {
+  background-color: white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+  padding: 6rem 0;
+  transition: transform 1s ease-out, opacity 0.5s ease;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin: 17% 0;
+}
+.burger-menu input:checked ~ .burger-menu__list a {
+  font-family: "Roboto Light", sans-serif;
+  font-size: 1.5em;
+  color:$purple;
+}
+.burger-menu input:checked ~ nav {
+  background-color: #AAAAAA;
+}
+
+
+
+@media (min-width: 800px) {
+  .burger-menu input#burger__toggle,
+  .burger-menu label,
+  .burger-menu .burger-wrapper {
+    display: none;
+  }
+  .burger-wrapper {
+    padding: 0.5rem 0.9rem;
+  }
+  .burger-menu__list{
+    display: block;
+    background-color: #232322;
+  }
+  .burger-menu{
+    position: inherit;
+  }
+
+}
+

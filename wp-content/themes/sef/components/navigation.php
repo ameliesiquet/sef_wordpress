@@ -1,7 +1,18 @@
 <nav id="navigation" class="navigation" role="navigation" itemscope>
     <h2 class="visually_hidden" role="heading" aria-level="2">Navigation</h2>
     <div class="logo">
-        <img src="../ressources/img/Logo.svg" alt="">
+        <?php
+        $logo = get_post(287);
+        if ($logo):
+        ?>
+            <?php $image = get_field('nav_logo', $logo->ID); ?>
+            <?php if ($image): ?>
+            <img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>">
+        <?php else: ?>
+            <p>Image not found</p>
+        <?php endif; ?>
+        <?php else: echo"Years not found" ?>
+        <?php endif; ?>
     </div>
     <div class="burger-menu">
         <input type="checkbox" name="burger-toggle" id="burger__toggle">

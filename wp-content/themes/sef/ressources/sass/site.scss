@@ -1,1 +1,15 @@
 @import "helpers";
+@import "reset";
+
+@import "global/variables";
+@import "global/global";
+
+@import "partials/burger";
+
+@import "components/header";
+@import "components/footer";
+
+// PAGES
+@import "pages/home/hero";
+@import "pages/home/actual_project";
+@import "pages/home/temoinages";

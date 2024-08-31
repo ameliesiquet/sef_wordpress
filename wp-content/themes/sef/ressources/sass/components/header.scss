@@ -1,0 +1,15 @@
+@import "../global/variables";
+header{
+  margin: 0;
+  .navigation{
+    background-color: $light-purple;
+
+    .logo{
+      padding: 0 15px;
+
+      img{
+        max-width: 15%;
+      }
+    }
+  }
+}
