@@ -1,4 +1,4 @@
-<section class="projets__all">
+<section class="projets__all showUp">
     <?php
     $years = get_post(200);
     if ($years):
@@ -10,7 +10,7 @@
             <li><?php echo get_field('year_3', $years->ID); ?></li>
         </ul>
     </div>
-    <span class="projets__fleche">
+    <span class="projets__all__fleche">
         <?php $year_image = get_field('arrow', $years->ID); ?>
         <?php if ($year_image): ?>
             <img src="<?= esc_url($year_image['url']); ?>" alt="<?= esc_attr($year_image['alt']); ?>">
@@ -24,11 +24,11 @@
     $projet_1 = get_post(185);
     if ($projet_1):
     ?>
-    <article class="projets__projet">
+    <article class="projets__all__projet">
         <h3 aria-level="3" role="heading"><?php echo get_field('projet_title', $projet_1->ID); ?></h3>
-        <span><?php echo get_field('projet_news', $projet_1->ID); ?></span>
+        <span><?php echo get_field('projet_new', $projet_1->ID); ?></span>
         <p><?php echo get_field('projet_top_content', $projet_1->ID); ?></p>
-        <div class="projets__image-slider">
+        <div class="image-slider">
             <ul>
                 <li>
                     <?php $image1 = get_field('projet_image_1', $projet_1->ID); ?>
@@ -65,11 +65,11 @@
     $projet_2 = get_post(193);
     if ($projet_2):
         ?>
-        <article class="projets__projet">
+        <article class="projets__all__projet">
             <h3 aria-level="3" role="heading"><?php echo get_field('projet_title', $projet_2->ID); ?></h3>
-            <span><?php echo get_field('projet_news', $projet_2->ID); ?></span>
+            <span><?php echo get_field('projet_new', $projet_2->ID); ?></span>
             <p><?php echo get_field('projet_top_content', $projet_2->ID); ?></p>
-            <div class="projets__image-slider">
+            <div class="image-slider">
                 <ul>
                     <li>
                         <?php $image1 = get_field('projet_image_1', $projet_2->ID); ?>

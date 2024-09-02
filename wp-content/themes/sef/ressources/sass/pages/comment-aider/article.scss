@@ -1,0 +1,87 @@
+@import "../../global/variables";
+
+.help {
+  &__ways {
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1em;
+    margin: 2em 0;
+
+    &__article {
+      &__content {
+        padding: 10%;
+
+        p {
+          font-size: 0.7em;
+          text-align: center;
+          margin: 1em 0;
+          line-height: 1.3em;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 1em;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 500px){
+  .help{
+    &__ways{
+      &__article{
+        &__content{
+          padding: 10% 20%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .help{
+    &__ways{
+      &__article {
+        &__content {
+          display: flex;
+          gap: 2em;
+          padding: 5% 10%;
+
+          img {
+            min-width: 30%;
+          }
+
+          p {
+            text-align: left;
+            align-content: center;
+          }
+        }
+      }
+      &__article:nth-of-type(odd) {
+        h2 {
+          margin-left: auto;
+          border-radius: 20px 0 0 20px;
+        }
+
+        img {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .help{
+    &__ways{
+      &__article{
+        &__content{
+          p{
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}

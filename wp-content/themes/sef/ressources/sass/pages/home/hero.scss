@@ -3,11 +3,12 @@
   .hero{
     display: flex;
     flex-direction: column;
-    gap: 0.7em;
+    gap: 1.5em;
     h2{
       font-family: MontereyMediumFLF, serif;
       font-size: 1.5em;
       color: $black;
+      margin: 20% 0 0;
       span{
         color: $purple;
       }
@@ -23,6 +24,63 @@
     }
     img{
       display: none;
+    }
+  }
+}
+
+@media(min-width: 800px){
+    .home{
+      .hero{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                "title img"
+                "text img"
+                "link img";
+        align-items: center;
+        grid-gap: 1em 3em;
+        h2{
+          grid-area: title;
+          margin: 10% 0 0 0;
+        }
+        p{
+          grid-area: text;
+        }
+        &__cta{
+          grid-area: link;
+        }
+        img{
+          width: 80%;
+          display: block;
+          grid-area: img;
+          justify-self: end;
+        }
+      }
+    }
+}
+
+@media (min-width: 1100px) {
+  .home{
+    .hero{
+      grid-gap: 0;
+      h2{
+        font-size: 2.5em;
+      }
+      p{
+        font-size: 1em;
+      }
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .home{
+    .hero{
+      h2{
+        font-size: 3em;
+      }
+      p{
+        font-size: 1.2em;
+      }
     }
   }
 }

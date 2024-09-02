@@ -1,0 +1,92 @@
+@import "../../global/variables";
+
+.donate {
+  .nature {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin: 2em;
+      align-items: center;
+      text-align: center;
+
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
+
+      img {
+        width: 80%;
+        order: -1;
+        border-radius: 1em;
+      }
+
+      p {
+        font-size: 0.7em;
+      }
+
+      span {
+        font-family: "Roboto Medium", sans-serif;
+        color: $purple;
+        font-size: 0.8em;
+      }
+
+      .ou, .que {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .donate {
+    .nature {
+      &__content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 2em 5em;
+
+        .wrapper {
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          line-height: 0.9em;
+
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .donate {
+    .nature {
+      &__content {
+        p{
+          font-size: 1em;
+          line-height: 1.2em;
+        }
+        span {
+          font-size: 0.9em;
+        }
+
+        .ou, .que {
+          gap: 0.7em;
+        }
+
+        .wrapper {
+          text-align: left;
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          line-height: 0.9em;
+
+        }
+      }
+    }
+  }
+}
+

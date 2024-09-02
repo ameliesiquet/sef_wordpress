@@ -4,34 +4,85 @@
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    text-align: center;
 
     h2{
       order: -2;
     }
-    &__item{
-      display: flex;
-      flex-direction: column;
-      gap: 0.6em;
-      h3{
-        font-family: "Roboto Medium", serif;
-        font-size: 0.9em;
-        color: $purple;
-      }
-      p{
-        font-size: 0.8em;
-        line-height: 1.2em;
-      }
-      .cta{
-        max-width: 30%;
-        padding: 10px;
-        &__btn{
+    &__content{
+      &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 0.6em;
+        align-items: center;
+        h3{
+          font-family: "Roboto Medium", serif;
+          font-size: 0.9em;
+          color: $purple;
+        }
+        p{
           font-size: 0.8em;
+          line-height: 1.2em;
         }
       }
     }
     img{
       max-width: 100%;
       order: -1;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .home{
+    .actual_project{
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-rows: 0.5fr 2.5fr;
+      grid-template-areas:
+        "img title"
+        "img item ";
+      grid-gap: 0 4em;
+      text-align: left;
+
+      h2{
+        grid-area: title;
+        align-content: center;
+
+      }
+      img{
+        grid-area: img;
+        align-self: center;
+      }
+      &__content{
+        grid-area: item;
+        align-content: center;
+
+        &__item{
+          align-items: last baseline;
+
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .home{
+    .actual_project{
+      h2{
+        font-size: 1.3em;
+      }
+      &__content{
+        &__item{
+          h3{
+            font-size: 1.2em;
+          }
+          p{
+            font-size: 1em;
+            line-height: 1.4em;
+          }
+        }
+      }
     }
   }
 }

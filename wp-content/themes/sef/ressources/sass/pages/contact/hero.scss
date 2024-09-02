@@ -1,0 +1,39 @@
+.contact{
+  &__container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 0.7em;
+    line-height: 1.2em;
+    text-align: center;
+    img{
+      border-radius: 1em;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .contact{
+    &__container{
+      flex-direction: row;
+      gap: 3em;
+      img{
+        min-width: 45%;
+      }
+      p{
+        align-content: center;
+        text-align: left;
+      }
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .contact{
+    &__container{
+      p{
+        font-size: 1.3em;
+        line-height: 1.3em;
+      }
+    }
+  }
+}

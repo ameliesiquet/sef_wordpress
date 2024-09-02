@@ -1,4 +1,4 @@
-<section class="history">
+<section class="history showUp">
     <h2 class="actual_project__title"><?= get_field('histoire_title'); ?></h2>
     <p><?= get_field('histoire_content'); ?></p>
     <?php $image = get_field('histoire_image');

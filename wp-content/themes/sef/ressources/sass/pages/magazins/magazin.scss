@@ -1,0 +1,111 @@
+@import "../../global/variables";
+
+.magazins {
+  &__magazin1, &__magazin2 {
+    padding: 0;
+    article{
+      padding: 10%;
+      .house-magazine {
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas:
+              "title title  "
+              "img   img    "
+              "ouv   adresse";
+        grid-row-gap: 1em;
+        img{
+          grid-area: img;
+        }
+        h3{
+          grid-area: title;
+        }
+        .adress {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2em;
+          p {
+            font-family: "Roboto Medium", sans-serif;
+            font-size: 0.9em;
+            color: $dark-purple;
+          }
+          span {
+            font-size: 0.7em;
+            display: block;
+            color: $grey;
+          }
+        }
+        &__content {
+          font-family: "Roboto Medium", sans-serif;
+          font-size: 1em;
+          color: $dark-purple;
+          max-width: 90%;
+          grid-area: ouv;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+          line-height: 0.9em;
+          span {
+            font-family: "Roboto Light", sans-serif;
+            color: $grey;
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .magazins{
+    div{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .magazins__magazin1, .magazins__magazin2{
+        h2{
+          font-size: 1em;
+          max-width: 70%;
+          padding: 6%;
+        }
+
+      }
+      .magazins__magazin1{
+        h2{
+          margin-right: auto;
+        }
+      }
+      .magazins__magazin2{
+        h2{
+          border-radius: 20px 0 0 20px ;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 800px) {
+  .magazins{
+    div{
+      .magazins__magazin1, .magazins__magazin2{
+        h2{
+          font-size: 1.5em;
+        }
+        &__article{
+          .house-magazine{
+            h3{
+              font-size: 1.5em;
+            }
+            p{
+              font-size: 1.2em;
+            }
+            .adress{
+              gap: 0.4em;
+              span{
+                font-size: 0.8em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

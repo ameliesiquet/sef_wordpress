@@ -3,12 +3,52 @@ header{
   margin: 0;
   .navigation{
     background-color: $light-purple;
-
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0;
+    justify-content: space-between;
+    align-items: center;
     .logo{
-      padding: 0 15px;
-
       img{
-        max-width: 15%;
+        max-width: 35%;
+        padding: 0 15px;
+
+      }
+    }
+  }
+}
+
+@media(min-width: 800px){
+  header{
+    .navigation{
+      gap: 1em;
+      padding: 0.2em 1.3em;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      .logo{
+        img{
+          max-width: 50%;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+@media(min-width: 1450px){
+  header{
+    .navigation{
+      gap: 1em;
+      padding: 0.2em 1.3em;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      .logo{
+        img{
+          max-width: 50%;
+          padding: 0;
+        }
       }
     }
   }

@@ -2,9 +2,9 @@
 $errors = $_SESSION['form_errors'] ?? [];
 unset($_SESSION['form_errors']);
 ?>
-<form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" class="contact__form__form">
+<form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="post" >
     <input type="hidden" name="action" value="contact_form">
-    <fieldset>
+    <fieldset class="contact__form">
         <legend class="visually_hidden">Contact form</legend>
         <div class="contact__form__name">
             <div class="contact__form__name__firstname">
@@ -47,7 +47,9 @@ unset($_SESSION['form_errors']);
                 <p class="form-error"><?php echo $errors['message'] ?? ''; ?></p>
             <?php endif; ?>
         </div>
-        <button type="submit" class="cta__btn">envoyer</button>
+        <div class="cta">
+            <button type="submit" class="cta__btn">envoyer</button>
+        </div>
 </form>
 
 

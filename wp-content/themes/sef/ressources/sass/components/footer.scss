@@ -29,12 +29,19 @@
         font-family: "Roboto Medium", sans-serif;
         font-size: 1.2em;
       }
+      &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.6em;
+      }
     }
   }
   hr{
     height: 1px;
     color: $white;
     width: 100%;
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   }
   .footer-logo{
     max-width: 30%;
@@ -52,4 +59,21 @@
       color: $grey;
     }
   }
+}
+
+@media (min-width: 800px) {
+    .footer{
+      padding: 3em 0 0;
+      margin: 10em 0 1em;
+      &__container{
+        flex-direction: row;
+        gap: 7em;
+        &__item{
+          text-align: left;
+        }
+      }
+      .footer-logo{
+        max-width: 15%;
+      }
+    }
 }

@@ -1,0 +1,90 @@
+@import "../../global/variables";
+.donate {
+  .financier{
+    &__content{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: center;
+      text-align: center;
+      font-size: 0.7em;
+      padding: 10%;
+
+      p {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        span {
+          font-family: "Roboto Medium", sans-serif;
+        }
+      }
+    }
+    .monnaie-list{
+      padding: 0 10%;
+      ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+
+        li{
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+          background: #EFF1FF;
+          border-radius: 1em;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          padding: 1em;
+          font-size: 0.6em;
+          span{
+            font-family: "Roboto Medium", sans-serif;
+            font-size: 2em;
+            color: $dark-purple;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .donate{
+    .financier{
+      .wrapper{
+        display: flex;
+        margin: 2em 3em;
+      }
+      &__content{
+        text-align: left;
+        padding: 10% 5%;
+      }
+      .monnaie-list{
+        padding: 5% ;
+      }
+    }
+  }
+}
+@media (min-width: 800px) {
+  .donate {
+    .financier {
+      &__content {
+        p, span{
+          font-size: 1.3em;
+        }
+      }
+      .monnaie-list{
+        ul{
+          grid-gap: 1.2em;
+          li{
+            gap: 0.8em;
+            padding: 1em;
+            font-size: 0.8em;
+            span{
+              font-size: 2.2em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

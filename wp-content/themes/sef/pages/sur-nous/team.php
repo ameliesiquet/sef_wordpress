@@ -1,4 +1,4 @@
-<section class="team">
+<section class="team showUp">
     <h2>L'équipe</h2>
     <div class="team__container">
         <?php
@@ -35,7 +35,7 @@
         <span>Faites partie de l'équipe&nbsp;!</span>
         <p>Nous apprécions toute l'aide que vous pouvez nous apporter, qu'elle soit petite ou grande.</p>
         <div class="team__contact__button cta">
-            <a href="<?= get_post_type_archive_link('contact'); ?>">Contact</a>
+            <a class="cta__btn" href="<?= get_post_type_archive_link('#contact'); ?>">Contact</a>
         </div>
     </div>
 </section>

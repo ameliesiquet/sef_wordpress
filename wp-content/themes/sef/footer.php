@@ -7,7 +7,7 @@
         <div class="footer__container">
             <div class="footer__container__item contact">
                 <h3 role="heading" aria-level="3">Contact</h3>
-                <ul role="list" class="footer__container__contact__list">
+                <ul role="list" class="footer__container__item__list">
                     <li>
                         <a title="Envoyer un email à l'asbl"
                            href="mailto:contact@sefasbl.com">email: contact@sefasbl.com</a>
@@ -36,7 +36,7 @@
             </div>
             <div class=" footer__container__item navigation">
                 <h3 role="heading" aria-level="3">Navigation</h3>
-                <ul class="footer__container__navigation__list">
+                <ul class="footer__container__item__list">
                     <?php
                     $nav = new WP_Query([
                         'post_type' => 'navigation-list',

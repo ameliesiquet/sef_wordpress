@@ -1,0 +1,148 @@
+@import "../../global/variables";
+
+.magazins {
+  &__depot {
+    padding: 0;
+
+    article {
+      padding: 10%;
+
+      .house-magazine {
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas:
+              "title title  "
+              "img   img    "
+              "ouv   adresse"
+              "content   content";
+        grid-row-gap: 1em;
+
+        h3 {
+          grid-area: title;
+        }
+
+        img {
+          grid-area: img;
+        }
+
+        .adress {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2em;
+
+          p {
+            font-family: "Roboto Medium", sans-serif;
+            font-size: 0.9em;
+            color: $dark-purple;
+          }
+
+          span {
+            font-size: 0.7em;
+            display: block;
+            color: $grey;
+          }
+        }
+
+        &__content {
+          font-family: "Roboto Medium", sans-serif;
+          font-size: 1em;
+          color: $dark-purple;
+          max-width: 80%;
+          grid-area: ouv;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+          line-height: 0.9em;
+
+          span {
+            font-family: "Roboto Light", sans-serif;
+            color: $grey;
+            font-size: 0.7em;
+          }
+        }
+
+        &__bottom {
+          font-size: 0.7em;
+          line-height: 1.2em;
+          grid-area: content;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .magazins {
+    &__depot {
+      article {
+        .house-magazine {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 0.5fr 2fr 2fr 1fr;
+          gap: 20px 25px;
+          grid-template-areas:
+              "title title"
+              "img adress"
+              "img ouv"
+              "text text";
+          padding: 5%;
+
+          h3 {
+            grid-area: title;
+            text-align: left;
+          }
+
+          img {
+            grid-area: img;
+          }
+
+          .adress {
+            grid-area: adress;
+            justify-content: center;
+          }
+
+          &__content {
+            grid-area: ouv;
+            justify-content: center;
+          }
+
+          &__bottom {
+            grid-area: text;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .magazins {
+    &__depot {
+      article {
+        .house-magazine {
+          h3 {
+            font-size: 1.5em;
+          }
+          .adress, &__content {
+            span {
+              font-size: 0.9em;
+            }
+          }
+          .adress{
+            p{
+              font-size: 1em;
+            }
+          }
+          &__bottom {
+            font-size: 0.9em;
+          }
+          &__content{
+            span{
+              max-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

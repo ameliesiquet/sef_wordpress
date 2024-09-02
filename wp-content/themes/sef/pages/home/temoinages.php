@@ -1,4 +1,4 @@
-<section class="temoignages">
+<section class="temoignages showUp">
     <h2 class="temoignages__title" aria-level="2" role="heading">Témoignages</h2>
     <div class="temoignages__container">
         <?php

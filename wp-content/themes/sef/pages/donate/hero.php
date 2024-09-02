@@ -1,4 +1,4 @@
-<section class="donate__hero">
+<section class="donate__hero showUp">
     <figure>
         <?php $image = get_field('donate_image');
         if ($image): ?>
@@ -8,6 +8,8 @@
             <p>Image not found</p>
         <?php endif; ?>
     </figure>
-    <p><?= get_field('donate_content'); ?></p>
-    <span>Vous pouvez nous soutenir par un <a href="">versement</a>, une <a href="">versement</a>, des <a href="">versement</a> ou une <a href="">versement</a></span>
+    <div>
+        <p><?= get_field('donate_content'); ?></p>
+        <span>Vous pouvez nous soutenir par un <a href="">versement</a>, une <a href="">versement</a>, des <a href="">versement</a> ou une <a href="">versement</a></span>
+    </div>
 </section>
