@@ -4,7 +4,7 @@ Bienvenue sur mon projet Client **SEF Huy** ! 🥳
 
 Lien vers le projet : https://sef.ameliesiquet.com
 
-## 📖 Naviagtion
+## 📖 Navigation
 
 Accueil
 Sur nous 
