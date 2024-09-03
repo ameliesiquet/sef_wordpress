@@ -5,15 +5,14 @@ Bienvenue sur mon projet Client **SEF Huy** ! 🥳
 Lien vers le projet : https://sef.ameliesiquet.com
 
 ## 📖 Navigation
-
-Accueil
-Sur nous 
-Maisons 
-Magasins
-Projets
-Comment aider?
-Contact
-Donate 
+- Accueil
+- Sur nous 
+- Maisons 
+- Magasins
+- Projets
+- Comment aider?
+- Contact
+- Donate 
 
 
 ## 📝 Description du projet
