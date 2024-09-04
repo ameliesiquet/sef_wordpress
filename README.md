@@ -3,6 +3,7 @@
 Bienvenue sur mon projet Client **SEF Huy** ! 🥳
 
 Lien vers le projet : https://sef.ameliesiquet.com
+Lien vers le wireframe : https://www.figma.com/design/VD6sVSFohHwg3j7gdV95vJ/Wireframe-Client?node-id=43-187&t=7qkQQ4UN8L6PLZDy-1
 
 ## 📖 Navigation
 - Accueil
